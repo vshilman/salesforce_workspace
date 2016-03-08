@@ -674,7 +674,7 @@
     };
 
     BootstrapTable.prototype.onSearch = function (event) {
-        var text = $.trim($(event.currentTarget).val());
+        var text = $(event.currentTarget).val(); //$.trim($(event.currentTarget).val());
 
         // trim search input
         $(event.currentTarget).val(text);
