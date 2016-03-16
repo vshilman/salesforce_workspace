@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Acknowledgement</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Acknowledgement</shortDescription>
+        <value>ASSET ACKNOWLEDGEMENT: 
+
+                        Use of this data asset requires that you have read the Data Use Agreement and received the briefing from the Legal. 
+                        
+                        By clicking Acknowledge, you confirm that you have understood the Data Use Agreement and will abide by its terms when using the data for your Research. 
+                        
+                        Any questions regarding the provisions or confidentiality obligations should be directed to the owner of the Data Asset at RWE.&apos;</value>
+    </labels>
+</CustomLabels>

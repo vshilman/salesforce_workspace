@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RWE Data Profiler</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RWE Data Profilers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data Asset Name --></label>
+        <name>Data_Asset_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Profiler Link --></label>
+        <name>Data_Profiler_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Profiler Type --></label>
+        <name>Data_Profiler__c</name>
+        <picklistValues>
+            <masterLabel>Achilles</masterLabel>
+            <translation><!-- Achilles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incidence &amp; Prevalence</masterLabel>
+            <translation><!-- Incidence &amp; Prevalence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>i2b2 Passport</masterLabel>
+            <translation><!-- i2b2 Passport --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RWE Data Asset --></label>
+        <name>RWE_Data_Asset_Profiler__c</name>
+        <relationshipLabel><!-- RWE Data Profilers --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>RWE Data Profiler Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

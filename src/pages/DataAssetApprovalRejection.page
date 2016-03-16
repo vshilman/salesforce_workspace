@@ -1,0 +1,100 @@
+<apex:page StandardController="RWE_Data_Asset_Approval__c" Extensions="DataAssetApprovalRejectionExtension" sidebar="false" showHeader="false" tabStyle="Account">
+
+    <apex:form id="formDataAssetApproval">
+        
+        <apex:sectionHeader title="Review Request" subtitle="Data Asset: {!RWE_Data_Asset_Approval__c.Name}" help="https://help.salesforce.com/htviewhelpdoc?err=1&id=approvals_processing_approval_requests.htm&siteLang=en_US" />
+        <apex:PageMessages />
+        <apex:pageBlock title="License Review Request">
+            
+            <apex:pageBlockButtons location="bottom"> 
+                <apex:commandButton value="Approve" action="{!eApproveRequest}"  disabled="{!cDisabledComponents}"/>
+                <apex:commandButton value="Reject" action="{!eRejectRequest}"  disabled="{!cDisabledComponents}" immediate="true" /> 
+            </apex:pageBlockButtons>   
+            
+            <apex:pageBlockSection columns="2" title="Data Asset Details" collapsible="false">
+                
+                <apex:pageBlockSectionItem >
+                    Data Asset <apex:outputField value="{!RWE_Data_Asset_Approval__c.RWE_Data_Asset__c}"/><!--<apex:outputLink value="{!RWE_Data_Asset_Approval__c.Id}"/>-->
+                </apex:pageBlockSectionItem>
+              <!--  <apex:pageBlockSectionItem >
+                    Data Profile<apex:outputText value="{!RWE_Data_Asset_Approval__c.Name}"/><apex:outputLink value="{!RWE_Data_Asset_Approval__c.Id}"/>
+                </apex:pageBlockSectionItem> -->
+                <apex:pageBlockSectionItem >
+                    Restricted Region <apex:outputText value="Russia"/><!--<apex:outputLink value="{!RWE_Data_Asset_Approval__c.Id}"/>-->
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    Contract
+                    <apex:outputpanel > 
+                        <apex:commandButton styleClass="buttonStyle" onclick="window.open('{!URLFOR($Action.Attachment.Download, recAttach)}');" style="width:120px;height:30px;background:#6699FF;" value="Display Document" rerender="false" rendered="{!NOT(ISBLANK(recAttach))}"/>
+                        <apex:outputText value="No attachments" rendered="{!ISBLANK(recAttach)}"/>                   
+                    </apex:outputpanel>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    Expiration Date<apex:outputText value="June 22, 2016"/><!--<apex:outputLink value="{!RWE_Data_Asset_Approval__c.Id}"/>-->
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="Requestor Details" collapsible="false">
+               <!-- <apex:pageBlockSectionItem >
+                     Name<apex:outputText value="{!RWE_Data_Asset_Approval__c.Requestor__r.Name}"/>  
+                </apex:pageBlockSectionItem> -->
+                <apex:pageBlockSectionItem >
+                     Name<apex:outputField value="{!RWE_Data_Asset_Approval__c.Requestor__c}"/>  
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     Department<apex:outputText value="{!RWE_Data_Asset_Approval__c.Requestor__r.Department}"/>  
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     Company<apex:outputText value="{!RWE_Data_Asset_Approval__c.Requestor__r.CompanyName}"/>  
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                     Country<apex:outputText value="USA"/>  
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockSection columns="2" title="Approval Checks" collapsible="false">
+                <apex:pageBlockSectionItem >
+                     Valid Till<apex:inputField value="{!RWE_Data_Asset_Approval__c.Valid_Till__c}" required="true" />  
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    Status<apex:outputText value="{!RWE_Data_Asset_Approval__c.Approval_Status__c}">   </apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!cFirstLevelApproval}" >
+                    <apex:inputCheckBox value="{!cLincenseActive}" disabled="{!cSecondLevelApproval}" />
+                    <apex:outputText value="Verified License is active">   </apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!cFirstLevelApproval}">
+                    <apex:inputCheckBox value="{!cLincenseUsage}" disabled="{!cSecondLevelApproval}" />
+                    <apex:outputText value="Verified License usage restrictions">   </apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!cFirstLevelApproval}">
+                    <apex:inputCheckBox value="{!cUserCredentials}" disabled="{!cSecondLevelApproval}" />
+                    <apex:outputText value="Verified user credentials">   </apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!cSecondLevelApproval}">
+                    <apex:inputCheckBox value="{!cDataLicense}" disabled="{!cDisabledComponents }" />
+                    <apex:outputText value="Verified License usage restrictions">   </apex:outputText>
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem rendered="{!cSecondLevelApproval}">
+                    <apex:inputCheckBox value="{!cRestriction}" disabled="{!cDisabledComponents }" />
+                    <apex:outputText value="Verified user credentials">   </apex:outputText>
+                </apex:pageBlockSectionItem>
+
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" title="Data Asset Comments" collapsible="false">
+                  <apex:pageBlockSectionItem >
+                    
+                    <apex:outputText value="Comments">   </apex:outputText>
+                    <apex:inputtextarea value="{!dynCom }"  />
+                </apex:pageBlockSectionItem>
+
+            </apex:pageBlockSection>
+            
+        </apex:pageBlock>
+        
+    </apex:form>
+    <apex:relatedList list="ProcessSteps" ></apex:relatedList>
+<br/>
+<br/>
+<br/>
+<!-- <apex:include pageName="/apex/appHistory?{!RWE_Data_Asset_Approval__c.Id}"/> -->
+</apex:page>

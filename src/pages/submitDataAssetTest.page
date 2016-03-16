@@ -1,0 +1,125 @@
+<apex:page StandardController="New_Data_Asset_Request__c" extensions="SubmitDataAssetExtension_Test" sidebar="false" showHeader="false" standardStylesheets="false" docType="html-5.0">
+<c:NavigationBar />
+<apex:form >
+    <div class="container topSubmit" style="width:75% !important;">
+            <span class="headerForm">Submit a Data Asset - With WF</span>
+            <p style="padding-left:15px !important;">Share what you know about this new Real World Data source</p>
+        <form role="form">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">*Data Asset Name</label>
+                        <apex:inputField styleclass="form-control" required="true" id="name" html-placeholder="Ex. lorem ipsum" value="{!New_Data_Asset_Request__c.Name}"/>
+                        <!-- <input type="text" class="form-control" id="name" placeholder="Ex. lorem ipsum"/> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="tarea">Therapeutic Area:</label>
+                        <apex:inputField styleclass="form-control" id="tarea" html-placeholder="select one" value="{!New_Data_Asset_Request__c.Therapeutic_Area__c}"/>
+                        <!-- <input type="text" class="form-control" id="tarea" placeholder="select one"/> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="dbtype">Type of Database:</label>
+                        <apex:inputField styleclass="form-control" id="dbtype" html-placeholder="select one" value="{!New_Data_Asset_Request__c.Database_Type__c}"/>
+                        <!-- <input type="text" class="form-control" id="dbtype" placeholder="select one"/> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="dtype">Data Type:</label>
+                        <apex:inputField styleclass="form-control" id="dtype" html-placeholder="select one" value="{!New_Data_Asset_Request__c.Data_Type__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> -->
+                    </div>
+                  <!--  <div class="form-group">
+                        <label for="dtype">Disease:</label>
+                        <apex:inputField styleclass="form-control" id="ftype" html-placeholder="select one" value="{!RWE_Data_Asset__c.Disease_if_specific__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>
+                     <div class="form-group">
+                        <label for="dtype">Biobank Availability:</label>
+                        <apex:inputField styleclass="form-control" id="gtype" html-placeholder="select one" value="{!RWE_Data_Asset__c.Medical__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>
+
+                    <div class="form-group">
+                        <label for="itype">Function:</label>
+                        <apex:inputField styleclass="form-control" id="itype" html-placeholder="select one" value="{!RWE_Data_Asset__c.Franchise_Function__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>
+                    <div class="form-group">
+                        <label for="jtype">Created Date:</label>
+                        <apex:inputtext styleclass="form-control" id="jtype" value="{!RWE_Data_Asset__c.Created_Date__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>
+                     <div class="form-group">
+                        <label for="mtype">Raw Data Accessibility:</label>
+                        <apex:inputField styleclass="form-control" id="mtype" html-placeholder="select one" value="{!RWE_Data_Asset__c.Raw_Data_Accessibility__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ktype">Disease Severity Available: </label>
+                        <apex:inputCheckbox styleClass="" id="ktype" value="{!RWE_Data_Asset__c.Disease_Severity_Available__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="ltype">Description: </label>
+                        <apex:inputField styleClass="form-control" id="ltype" value="{!RWE_Data_Asset__c.Description__c}"/>
+                        <!-- <input type="text" class="form-control" id="dtype" placeholder="select one"/> 
+                    </div>   -->
+                    
+                </div>
+                <div class="col-md-5 col-md-offset-1">
+                    <!--<span class="control-label" style="font-weight:bold; margin-top:0 !important;">Region:</span>
+                    <div class="checkbox">
+                        <ul style="list-style-type:none; padding-left:0;">
+                            <li><label><input type="checkbox"/> US</label></li>
+                            <li><label><input type="checkbox"/> Europe</label></li>
+                            <li><label><input type="checkbox"/> Canada</label></li>
+                            <li><label><input type="checkbox"/> Global (Multiple Regions)</label></li>
+                        </ul>
+                    </div>-->
+                    <div class="form-group" style="margin-top:35px;">
+                        <label class="control-label" for="inputGroup">Data Asset Owner </label>
+                        <div class="input-group" style="margin-left:0 !important; width:70% !important;">
+                        <apex:inputField styleclass="form-control" id="inputGroup" html-placeholder="Search" value="{!New_Data_Asset_Request__c.Data_Asset_Owner__c}" />
+                            <!-- <input type="text" class="form-control"
+                                   placeholder="Search" id="inputGroup" /> -->
+                           <span class="input-group-addon">
+                                <i class="fa fa-search" style="color:#2482B5;"></i>
+                            </span> 
+                        </div> 
+                    </div>
+                    <!-- <label class="radio-inline">
+                        <input type="radio" name="optradio"/>User
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="optradio"/>Queue
+                    </label> -->
+                    <br /><br />
+                    <p>Upload Additional Information</p>
+                    
+                    <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <apex:inputFile id="file_File" value="{!dUploadAttachementBody}" filename="{!dFileName}" styleclass="fileupload-new"/>
+                        <!-- <span class="btn btn-primary btn-file">
+                            <span class="fileupload-new">Browse... </span>
+                           
+                            <span class="fileupload-exists">Change</span><input type="file" />
+                        </span>
+                        <span class="fileupload-preview"></span>
+                        <a href="#" class="close fileupload-exists" data-dismiss="fileupload" style="float: none; vertical-align:sub;">×</a> -->
+                    </div>
+
+                </div>
+            </div>
+            <hr style="border: 1px solid #C2C8D4 !important; margin-bottom:0 !important;" />
+            <span style="font-size:12px; margin-top:0;">* Required field</span>
+            <br /><br />
+            <div class="row">
+                <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                <apex:commandButton action="{!dCreateDataAsset}" value="Submit" styleclass="btn btn-primary"/>
+                <a type="reset" class="btn btn-primary" href="/apex/HomePage">Cancel</a>
+            </div>
+        </form>
+    </div>
+<c:Footer />
+</apex:form>
+</apex:page>

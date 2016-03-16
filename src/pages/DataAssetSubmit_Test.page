@@ -1,0 +1,6 @@
+<apex:page applyBodyTag="false" applyHtmlTag="true" sidebar="false" showHeader="false" standardstylesheets="false" docType="html-5.0" controller="RWEContacts">
+  <!-- Begin Default Content REMOVE THIS -->
+  <h1>Come and See this page after 2 weeks! :)</h1>
+
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

@@ -1,0 +1,153 @@
+<apex:page StandardController="RWE_Data_Asset__c" Extensions="DataAssetController" sidebar="false" showHeader="false" standardStylesheets="false">
+<c:NavigationBar />
+<apex:form >
+        <div class="container">
+        <div id="collapsible-panels">
+            <!--Update - Changed tables to div for responsiveness--> <!--Just Added-->
+            <div class="row">
+                <div class="col-md-12 ">
+                    <h3 class="pull-left">
+                        <i class="fa fa-codepen" style="color:#e5e5e5;"></i>
+                        <span style="font-size:22px; font-family:Arial, Helvetica, sans-serif; margin-left:5px;">Data Assets: {!cDataAssetListCntlr.Size}</span> 
+                    </h3>
+                </div>
+            </div>
+            <div>
+                <table id="tblHeader" style="width:100%; margin-top:20px;">
+                    <tr>
+                        <td align="left" style="margin-left:25px;">
+                            <span id="controlSpan" class="glyphicon glyphicon-chevron-up" style="cursor:pointer;padding:10px;margin-left:10px;">
+                                <span style="font-size:22px; font-family:Arial, Helvetica, sans-serif;"> Filters</span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="contentdiv" class="row vdivide">
+                <div id="contentTable" class="col-md-12" style="min-height:240px; background-color:#A8D5EE; border:1px solid #e5e5e5; ">
+                    <div valign="top" class="col-md-4">
+                        <h4>Therapeutic Area</h4>
+                            <ul class="checkbox">
+                                <apex:repeat value="{!mDataAssetObjectStructure['Theraputic_Area__c']}" var="Tarea">
+                                    <li>
+                                        <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                            <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                        </apex:inputCheckbox>
+                                        <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                    </div>
+                    <div valign="top" class="col-md-4">
+                        <h4>Data Type</h4>
+                        <ul class="checkbox">
+                            <apex:repeat value="{!mDataAssetObjectStructure['Data_Type__c']}" var="Tarea">
+                                <li >
+                                    <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                        <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                    </apex:inputCheckbox>
+                                    <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                </li>
+                            </apex:repeat>
+                        </ul>
+                    </div>
+          <!--          <div valign="top" class="col-md-3">
+                        <h4>Raw Data Accessibility</h4>
+                        <ul class="checkbox">
+                            <apex:repeat value="{!mDataAssetObjectStructure['Raw_Data_Accessibility__c']}" var="Tarea">
+                                <li >
+                                    <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                        <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                    </apex:inputCheckbox>
+                                    <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                </li>
+                        </apex:repeat>
+                        </ul>
+                    </div> -->
+                    <div valign="top" class="col-md-4">   <!-- This is Hard Coded for Demo -->
+                        <h4>Region</h4>
+                        <ul class="checkbox">
+                            <li><input type="checkbox" id="cb1" value="can" /><label for="cb1">Europe (10)</label></li>
+                            <li><input type="checkbox" id="cb2" value="emer" /><label for="cb2">Asia (7)</label></li>
+                            <li><input type="checkbox" id="cb3" value="jap" /><label for="cb3">Africa (12)</label></li>
+                            <li><input type="checkbox" id="cb4" value="us" /><label for="cb4">US (5)</label></li>
+                            <li><input type="checkbox" id="cb5" value="globe" /><label for="cb5">Global [Multiple Regions] (27)</label></li>
+                        </ul>
+                    </div>
+                    <!--removed slider-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="col-xs-12">
+           <apex:outputPanel id="iTable" >
+                <div class="tab-content">
+                        <table id="testTable"  data-toggle="table" class="table table-bordered" data-search="true" data-pagination="true" data-page-size="10">
+                        <thead>
+                            <tr>
+                             <!--   <th data-field="id" data-visible="false"></th> -->
+                                <th data-field="name" data-sortable="true" data-sorter="SorterCol">Data Asset</th>
+                                <th data-field="owner" data-sortable="true">Data Asset Owner</th>
+                                <th data-field="dprofiler" data-sortable="true">Data Profiler</th>
+                                <th data-field="dtcreate" data-sortable="true">Availability Date</th>
+                                <th data-field="dprofiler" data-sortable="true">Studies Utilized</th>
+                                <apex:outputPanel rendered="true" > <th data-field="dprofiler" data-sortable="true">Approval Status</th> </apex:outputPanel>
+                                <!--<th data-field="apprstat" data-sortable="true" data-formatter="operateFormatter">Asset Status</th> -->
+                            </tr>
+                        </thead>
+                            <apex:repeat value="{!cDataAssetListCntlr }" var="eDataAsset">
+                            
+                                <tr>
+                                    <td>
+                                        <a href="/{!eDataAsset.Id}"> <apex:outputLabel value="{!eDataAsset.Name}" title="{!eDataAsset.Name}" /> </a>
+                                    </td>
+                                    <td>
+                                        <a href="/{!eDataAsset.Data_Asset_Owner__c}"> <apex:outputLabel value="{!eDataAsset.Data_Asset_Owner__r.Name}" /></a> 
+                                    </td>
+                                    <td>
+                                        <apex:repeat value="{!eDataAsset.RWE_Data_Profilers__r}" var="eDataAssetLink">
+                                            <apex:outputField label="{!eDataAssetLink.Data_Profiler__c}" value="{!eDataAssetLink.Data_Profiler_Link__c}" /> <br/>
+                                        </apex:repeat>
+                                    </td>
+                                    <td>
+                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                            <apex:param value="{!eDataAsset.Created_Date__c}" />
+                                        </apex:outputText>
+                                    </td>
+                                     <td>
+                                        <apex:outputLabel value="{!eDataAsset.Count_Studies__c}" />
+                                    </td> 
+                                </tr>
+                            </apex:repeat>
+                    </table>
+                    <script type="text/javascript">
+                       $("#testTable").bootstrapTable({
+                            pagination: true,
+                            silent:true
+                       });
+                       
+                        $("body").on('click','.outputLabel',function() {
+                         var myUrl = $(this).parent().attr('href');
+                         window.open(myUrl,'_top');
+                         //alert(myUrl);
+                         return false;
+                        });
+                        
+                       
+                    </script>
+                </div>
+            </apex:outputPanel>
+            <!-- tab-content -->
+
+
+        </div>
+    </div>
+    
+    
+<c:Footer />
+    </apex:form>    
+
+
+    </apex:page>

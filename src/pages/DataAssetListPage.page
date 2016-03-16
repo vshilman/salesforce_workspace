@@ -1,0 +1,151 @@
+<apex:page StandardController="RWE_Data_Asset__c" Extensions="DataAssetController" sidebar="false" showHeader="false" standardStylesheets="true">
+<c:NavigationBar />
+    <html>
+    <head>
+        <title></title>
+        
+        <apex:stylesheet value="{!URLFOR($Resource.Workspace, 'css/bootstrap.min.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.Workspace, 'css/bootstrap-theme.min.css')}" />
+        <apex:stylesheet value="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" />
+        <apex:stylesheet value="{!URLFOR($Resource.Workspace, 'css/bootstrap-table.css')}" />
+        <apex:stylesheet value="{!URLFOR($Resource.Workspace, 'javascript/jquery-1.11.3.min.js')}" />
+        <apex:includeScript value="//code.jquery.com/jquery-1.9.1.js" />
+        <apex:includeScript value="{!URLFOR($Resource.Workspace, 'javascript/jquery-ui.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.Workspace, 'javascript/bootstrap.min.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.Workspace, 'javascript/bootstrap-table.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.Workspace, 'javascript/jquery.nestable.js')}" />
+        <apex:includeScript value="{!URLFOR($Resource.Workspace, 'javascript/global.js')}" />
+        
+    </head>
+    <body>
+    <apex:form >
+        <div class="container">
+            <div id="collapsible-panels">
+                <table id="tblstudies" style="width:100%; margin-top:20px;">
+                    <tr>
+                        <td align="left"><p style="font-size:22px;">{!cDataAssetListCntlr.ResultSize} Data Assets</p></td>
+                        <td align="right">
+                            <span id="controlSpan" class="glyphicon glyphicon-chevron-up" style="margin-right:25%;cursor:pointer;"></span>
+                        </td>
+                    </tr>
+                </table>
+                <div id="contentdiv">
+                    <table>
+                        <tr>
+                            <td valign="top" class="col-md-4">
+                                <h4>Theraputic Area</h4>
+                                <ul class="checkbox">
+                                    <apex:repeat value="{!mDataAssetObjectStructure['Theraputic_Area__c']}" var="Tarea">
+                                        <li >
+                                            <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                                <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                            </apex:inputCheckbox>
+                                            <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                        </li>
+                                    </apex:repeat>
+                                </ul>
+                            </td>
+                            <td valign="top" class="col-md-4">
+                                <h4>Region</h4>
+                                <ul class="checkbox">
+                                    <apex:repeat value="{!mDataAssetObjectStructure['Claims_Type__c']}" var="Tarea">
+                                        <li >
+                                            <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                                <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                            </apex:inputCheckbox>
+                                            <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                        </li>
+                                    </apex:repeat>
+                                </ul>
+                            </td>
+                            <td valign="top" class="col-md-4">
+                                <h4>Status</h4>
+                                <ul class="checkbox">
+                                    <apex:repeat value="{!mDataAssetObjectStructure['Raw_Data_Accessibility__c']}" var="Tarea">
+                                        <li >
+                                            <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                                <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                            </apex:inputCheckbox>
+                                            <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                        </li>
+                                    </apex:repeat>
+                                </ul>
+                            </td>
+                            <td valign="top" align="center" class="pull-left">
+                                <label for="amount">Enrolments</label>
+                                <input type="text" id="amount" style="border:0; text-align:center; color:#f6931f; font-weight:bold;" />
+                                <div id="slider-vertical" style="height:150px;width:10px !important;"></div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="col-xs-12">
+                <div class="tab-content">
+                    <apex:outputPanel id="iTable">
+                    <table data-toggle="table"  data-height="410"  data-sort-name="name" data-sort-order="asc" data-show-toggle="false" data-pagination="true" data-page-size="10" data-page-list="[10]"  data-search="true"> <!-- data-show-refresh="true" data-id-field="id" data-url="javascript/data3.json"-->
+                        <thead>
+                            <tr>
+                                <th data-field="id" data-checkbox="true"></th>
+                                <th data-field="name" data-switchable="false" data-sortable="true" data-sorter="SorterCol">Name</th>
+                                <th data-field="price" data-sortable="true" data-sorter="SorterNum">Price</th>
+                                <th data-field="column1" data-sortable="true" data-sorter="SorterNum">Column1</th>
+                                <th data-field="column2" data-sortable="true" data-visible="false" data-sorter="SorterNum">Column2</th>
+                                <th data-field="column3" data-sortable="true" data-switchable="false" data-sorter="SorterNum">Column3</th>
+                                <th data-field="column4" data-sortable="true" data-visible="false" data-sorter="SorterNum">Column4</th>
+                            </tr>
+                            <apex:repeat value="{!DataAssets}" var="eDataAsset">
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eDataAsset.Name}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eDataAsset.Name}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eDataAsset.Name}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eDataAsset.Name}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eDataAsset.Name}" />
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </thead>
+                        <script type="text/javascript">
+                            function SorterNum(a, b) {
+                                a = +a.substring(1);
+                                b = +b.substring(1);
+                                if (a > b) return 1;
+                                if (a < b) return -1;
+                                return 0;
+                            }
+                            function SorterCol(a, b) {
+                                a = +a.substring(3);
+                                b = +b.substring(3);
+                                if (a > b) return 1;
+                                if (a < b) return -1;
+                                return 0;
+                            }
+
+                        </script>
+                    </table>
+                    </apex:outputPanel>
+                </div>
+                <!-- tab-content -->
+
+
+            </div>
+        </div>
+    </apex:form>    
+    </body>
+    </html>
+
+    </apex:page>

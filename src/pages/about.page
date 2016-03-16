@@ -1,0 +1,25 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" controller="HomePage">
+<c:NavigationBar />
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="home_center_title">Optimizing Your Assets Value</h3>
+            </div>
+        </div>
+        <div class="row" style="padding:30px;">
+            <div class="col-md-12 about-pad">
+                <ol class="rounded-list">
+                    <li>Spend less time looking for data, and more time getting value from it</li>
+                    <li>Collaborate with users of data assets of interest and understand commercial value</li>
+                    <li>Discover new data assets and unlock their potential</li>
+                    <li>Data Governance across all sources and partnerships</li>
+                    <li>Manage your contracts and drive higher commercial value</li>
+                    <li>Control who can discover data assets</li>
+                    <li>Provide better business audit and reporting framework across assets</li>
+                </ol>
+
+            </div>
+        </div>
+        </div>
+<c:Footer />
+</apex:page>

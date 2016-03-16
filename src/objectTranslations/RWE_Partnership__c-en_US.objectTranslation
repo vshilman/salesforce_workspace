@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RWE Partnership</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RWE Partnerships</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Type --></label>
+        <name>Partner_Type__c</name>
+        <picklistValues>
+            <masterLabel>Academic Medical Center</masterLabel>
+            <translation><!-- Academic Medical Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultancy Firm</masterLabel>
+            <translation><!-- Consultancy Firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government Entity</masterLabel>
+            <translation><!-- Government Entity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare IT/ Informatics</masterLabel>
+            <translation><!-- Healthcare IT/ Informatics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrated Health System</masterLabel>
+            <translation><!-- Integrated Health System --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Profit</masterLabel>
+            <translation><!-- Non-Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patient Advocacy Group</masterLabel>
+            <translation><!-- Patient Advocacy Group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payer</masterLabel>
+            <translation><!-- Payer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma Company</masterLabel>
+            <translation><!-- Pharma Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional Society</masterLabel>
+            <translation><!-- Professional Society --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Research Network</masterLabel>
+            <translation><!-- Research Network --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partnership Lead --></label>
+        <name>Partnership_Lead__c</name>
+        <relationshipLabel><!-- RWE Partnerships --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Partnership Sponsor --></label>
+        <name>Partnership_Sponsor__c</name>
+        <picklistValues>
+            <masterLabel>Clinical Operations</masterLabel>
+            <translation><!-- Clinical Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drug Safety</masterLabel>
+            <translation><!-- Drug Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Affairs</masterLabel>
+            <translation><!-- Medical Affairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RWE</masterLabel>
+            <translation><!-- RWE --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partnership Status --></label>
+        <name>Partnership_Status__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation><!-- Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evaluated and Not Pursued</masterLabel>
+            <translation><!-- Evaluated and Not Pursued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Africa</masterLabel>
+            <translation><!-- Africa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asia</masterLabel>
+            <translation><!-- Asia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Europe</masterLabel>
+            <translation><!-- Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global [Multiple Regions]</masterLabel>
+            <translation><!-- Global [Multiple Regions] --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation><!-- US --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unspecified</masterLabel>
+            <translation><!-- Unspecified --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>RWE Partnership Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

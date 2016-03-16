@@ -1,0 +1,27 @@
+<apex:page StandardController="RWE_Data_Asset_Approval__c" Extensions="RequestReviewExtension"  sidebar="false" showHeader="false" tabStyle="Account">
+
+    <apex:form id="reqReview">
+         <apex:sectionHeader title="Review Request" subtitle="" help="https://help.salesforce.com/htviewhelpdoc?err=1&id=approvals_processing_approval_requests.htm&siteLang=en_US" />
+    	 <apex:pageBlock title="Approve/Reject Approval Request">
+             <apex:pageBlockButtons location="bottom"> 
+                <apex:commandButton value="Approve" action="{!eApproveRequest}"  disabled="{!cDisabledComponents}"/>
+                <apex:commandButton value="Reject" action="{!eRejectRequest}"  disabled="{!cDisabledComponents}" immediate="true" /> 
+            </apex:pageBlockButtons> 
+              <apex:pageBlockSection columns="1" collapsible="false">
+              <apex:pageBlockSectionItem >
+                  RWE Request<apex:outputField value="{!RWE_Data_Asset_Approval__c.RWE_Data_Asset__c}"/>
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                  Owner <apex:outputText value="{!RWE_Data_Asset_Approval__c.Requestor__r.Name}"/>  
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+                  Valid Till<apex:inputField value="{!RWE_Data_Asset_Approval__c.Valid_Till__c}" required="true" />  
+             </apex:pageBlockSectionItem>
+             <apex:pageBlockSectionItem >
+             <apex:outputText value="Comments">   </apex:outputText>
+                    <apex:inputtextarea id="com" rows="4" value="{!dynCom }" cols="100"   />
+             </apex:pageBlockSectionItem>
+             </apex:pageBlockSection>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

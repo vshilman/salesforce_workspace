@@ -1,0 +1,35 @@
+<apex:page Controller="ProcessDecision" sidebar="false" showHeader="false">
+ <apex:form >
+  <apex:sectionHeader title="Review Request" subtitle="Data Asset: {!records.Name}" help="https://help.salesforce.com/htviewhelpdoc?err=1&id=approvals_processing_approval_requests.htm&siteLang=en_US" />
+    <apex:pageBlock title="License Review Request">
+ <!--       <apex:pageBlockButtons location="bottom"> 
+          <apex:commandButton value="Approve" action="{!save}"/>
+           <apex:commandButton value="Reject" action="{!cancel}"/> 
+       </apex:pageBlockButtons>   -->
+       <apex:pageBlockSection columns="1">
+           <apex:pageBlockSectionItem >
+               Event Number<apex:outputText value="{!records.Name}"/><!--<apex:outputLink value="/{!RWE_Data_Asset__c.Id}">{!RWE_Data_Asset__c.Name}</apex:outputLink> -->
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+               Owner<apex:outputField value="{!records.OwnerId}"/>   
+           </apex:pageBlockSectionItem>
+           <apex:pageBlockSectionItem >
+               Status<apex:outputText value="{!records.Asset_Status__c}">   </apex:outputText>
+           </apex:pageBlockSectionItem>
+ <!--          <apex:pageBlockSectionItem >
+                Approval/Reject Code
+                <apex:selectList id="codes" size="1" required="true" value="{!dynRec}">
+                  <apex:selectOptions value="{!codes}"/>
+                </apex:selectList>  
+           </apex:pageBlockSectionItem> 
+           <apex:pageBlockSectionItem >
+               Comments<apex:inputTextarea id="newDesc" cols="90" rows="6" style="resize:none;" value="{!dynCom}"  />
+           </apex:pageBlockSectionItem>  -->
+        </apex:pageBlockSection>
+   </apex:pageBlock>
+   </apex:form>
+   <br/>
+   <br/>
+   <br/>
+   <apex:include pageName="/apex/appHistory?{!records.Id}"/>
+</apex:page>

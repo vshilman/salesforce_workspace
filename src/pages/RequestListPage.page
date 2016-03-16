@@ -1,0 +1,160 @@
+<apex:page StandardController="RWE_Data_Asset_Approval__c" Extensions="RequestListController" sidebar="false" showHeader="false" standardStylesheets="false" title="Requests"> 
+<c:NavigationBar />
+<apex:form >
+        <div class="container">
+            <div id="collapsible-panels">
+                <!--Update - Changed tables to div for responsiveness-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!--Change class to 12 columns-->
+                        <h3 class="pull-left">
+                            <i class="fa fa-codepen" style="color:#e5e5e5;"></i>
+                            <span style="font-size:22px; font-family:Arial, Helvetica, sans-serif; margin-left:5px;">Requests: {!cRequestListController.ResultSize}</span>
+                        </h3>
+                    </div>
+                    <!--removed slider-->
+                </div>
+                <div>
+                    <table id="tblHeader" style="width:100%; margin-top:20px;">
+                        <tr>
+                            <td align="left" style="margin-left:25px;">
+                                <span id="controlSpan" class="glyphicon glyphicon-chevron-up" style="cursor:pointer;padding:10px;margin-left:10px;">
+                                    <span style="font-size:22px; font-family:Arial, Helvetica, sans-serif;"> Filters</span>
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div id="contentdiv" class="row vdivide">
+                    <div id="contentTable" class="col-md-12" style="min-height:240px; background-color:#A8D5EE; border:1px solid #e5e5e5; ">
+                        <div valign="top" class="col-md-3">
+                            <!--changed class-->
+                            <h4>Therapeutic Area</h4>
+                            <ul class="checkbox">
+                                <apex:repeat value="{!mRequestListObjectStructure['Theraputic_Area__c']}" var="Tarea">
+                                    <li>
+                                        <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                            <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                        </apex:inputCheckbox>
+                                        <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                        <div valign="top" class="col-md-3">
+                            <!--changed class-->
+                            <h4>Claims Type</h4>
+                            <ul class="checkbox">
+                                <apex:repeat value="{!mRequestListObjectStructure['Claims_Type__c']}" var="Tarea">
+                                    <li >
+                                        <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                            <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                        </apex:inputCheckbox>
+                                        <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                        <div valign="top" class="col-md-3">
+                            <!--changed class-->
+                            <h4>Approval Status</h4>
+                            <ul class="checkbox">
+                                <apex:repeat value="{!mRequestListObjectStructure['Approval_Status__c']}" var="Tarea">
+                                    <li >
+                                        <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                            <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                        </apex:inputCheckbox>
+                                        <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                        <div valign="top" class="col-md-3">
+                            <!--changed class-->
+                            <h4>Raw Data Accessibility</h4>
+                            <ul class="checkbox">
+                                <apex:repeat value="{!mRequestListObjectStructure['Raw_Data_Accessibility__c']}" var="Tarea">
+                                    <li >
+                                        <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                            <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                        </apex:inputCheckbox>
+                                        <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                    </li>
+                                </apex:repeat>
+                            </ul>
+                        </div>
+                        <!--removed slider-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <div class="container">
+        <div class="col-xs-12">
+           <apex:outputPanel id="iTable">
+                <div class="tab-content">
+                        <table id="testTable"  data-toggle="table" class="table table-bordered" data-search="true" data-pagination="true" data-page-size="10">
+                        <thead>
+                            <tr>
+                                    <th data-field="id" data-visible="false"></th>
+                                    <th data-field="name" data-sortable="true" data-sorter="SorterCol">Data Asset</th>
+                                    <th data-field="owner" data-sortable="true">Requester</th>
+                                   
+                                    <th data-field="sutil" data-sortable="true">Therapeutic Area</th>
+                                    <th data-field="dtcreate" data-sortable="true">Requested Date</th>
+                                    <th data-field="apprstat" data-sortable="true" >Approval Status</th>
+                                </tr>
+                             </thead>
+                                <apex:repeat value="{!RequestList}" var="eRequest">
+                                
+                                    <tr>
+                                        <td>
+                                        </td>
+                                        <td>
+                                            <a href="/apex/DataAssetApprovalRejection?Id={!eRequest.Id}"> <apex:outputLabel value="{!eRequest.Name}" /> </a>
+                                            <!-- <apex:outputLink value="/apex/DataAssetApprovalRejection?Id={!eRequest.Id}"> <apex:outputLabel value="{!eRequest.Name}" /> </apex:outputLink>  -->
+                                        </td>
+                                        <td>
+                                            <a href="/{!eRequest.Relevant_Contact__c}"> <apex:outputLabel value="{!eRequest.Relevant_Contact__r.Name}" /> </a>
+                                        </td>
+                                        <td>
+                                            <apex:outputLabel value="{!eRequest.RWE_Data_Asset__r.Theraputic_Area__c}" />
+                                        </td>
+                                        <td>
+                                            <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                                <apex:param value="{!eRequest.createddate}" />
+                                            </apex:outputText>
+                                        </td>
+                                        <td>
+                                            <apex:outputLabel value="{!eRequest.Approval_Status__c}" />
+                                        </td>
+                                    </tr>
+                                </apex:repeat>
+                            
+                        </table>
+                        <script type="text/javascript">
+                       $("#testTable").bootstrapTable({
+                            pagination: true
+                       });
+                       
+                        $("body").on('click','.outputLabel',function() {
+                         var myUrl = $(this).parent().attr('href');
+                         window.open(myUrl,'_top');
+                         //alert(myUrl);
+                         return false;
+                        });
+                        
+                       
+                    </script>
+                    </div>
+                <!-- tab-content -->
+                </apex:outputPanel>
+    
+            </div>
+        </div>
+    
+    
+<c:Footer />
+</apex:form>
+
+</apex:page>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RWE Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RWE Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Legal Approval</masterLabel>
+            <translation><!-- Pending Legal Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending License Approval</masterLabel>
+            <translation><!-- Pending License Approval --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Proposed</masterLabel>
+            <translation><!-- Proposed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Request Arrived --></label>
+        <name>Last_Request_Arrived__c</name>
+    </fields>
+    <fields>
+        <label><!-- RWE Data Asset --></label>
+        <name>RWE_Data_Asset__c</name>
+        <relationshipLabel><!-- RWE Data Asset Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relevant Contact --></label>
+        <name>Relevant_Contact__c</name>
+        <relationshipLabel><!-- RWE Data Asset Approvals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requestor --></label>
+        <name>Requestor__c</name>
+        <relationshipLabel><!-- RWE Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Valid Till --></label>
+        <name>Valid_Till__c</name>
+    </fields>
+    <layouts>
+        <layout>RWE Data Asset Approval Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <nameFieldLabel>RWE Request</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

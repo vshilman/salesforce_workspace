@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>RWE_Data_Asset__c.RWE_Data_Asset_Approvals__r$Name</field>
+    </columns>
+    <columns>
+        <field>RWE_Data_Asset__c.RWE_Data_Asset_Approvals__r$Approval_Status__c</field>
+    </columns>
+    <columns>
+        <field>RWE_Data_Asset__c.RWE_Data_Asset_Approvals__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>RWE_Data_Asset__c.RWE_Data_Asset_Approvals__r$Requestor__c</field>
+    </columns>
+    <columns>
+        <field>RWE_Data_Asset__c.RWE_Data_Asset_Approvals__r$Valid_Till__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>RWE_Data_Asset__c$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>RWE Approval Requests</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>RWE_Data_Asset_Approval__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>RWE_Data_Asset__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,937 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RWE Req</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RWE Reqs</value>
+    </caseValues>
+    <fields>
+        <help><!-- The relative business need/value for service provided --></help>
+        <label><!-- Application of Deliverable --></label>
+        <name>Application_of_Deliverable__c</name>
+        <picklistValues>
+            <masterLabel>External Regulatory / Disclosure</masterLabel>
+            <translation><!-- External Regulatory / Disclosure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>External Scientific / Disclosure</masterLabel>
+            <translation><!-- External Scientific / Disclosure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feasibility Internal Decision</masterLabel>
+            <translation><!-- Feasibility Internal Decision --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RWE Study Design</masterLabel>
+            <translation><!-- RWE Study Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety</masterLabel>
+            <translation><!-- Safety --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Business unit that is funding the activity or research study --></help>
+        <label><!-- Business Unit (Primary) --></label>
+        <name>Business_Unit_Primary__c</name>
+        <picklistValues>
+            <masterLabel>Biomedicines (LBM)</masterLabel>
+            <translation><!-- Biomedicines (LBM) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diabetes (DBU)</masterLabel>
+            <translation><!-- Diabetes (DBU) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMBU</masterLabel>
+            <translation><!-- EMBU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elanco</masterLabel>
+            <translation><!-- Elanco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Business Unit Specific</masterLabel>
+            <translation><!-- Non Business Unit Specific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oncology (OBU)</masterLabel>
+            <translation><!-- Oncology (OBU) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please review the contract associated with this RWE Data Asset, which can be found in the Notes &amp; Attachments section of the RWE Data Asset record --></help>
+        <label><!-- Completed Data Asset Contract Review(s) --></label>
+        <name>Completed_Data_Asset_Contract_Review_s__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consult Type --></label>
+        <name>Consult_Type__c</name>
+        <picklistValues>
+            <masterLabel>FDAMA114</masterLabel>
+            <translation><!-- FDAMA114 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MQS/Procedure Question</masterLabel>
+            <translation><!-- MQS/Procedure Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Statistical Methods</masterLabel>
+            <translation><!-- Statistical Methods --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Study Design</masterLabel>
+            <translation><!-- Study Design --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Consultant Resource Effort --></label>
+        <name>Consultant_Resource_Effort__c</name>
+        <picklistValues>
+            <masterLabel>Brief (conversations w/o draft review)</masterLabel>
+            <translation><!-- Brief (conversations w/o draft review) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Long Term (&gt;3 meetings including draft review)</masterLabel>
+            <translation><!-- Long Term (&gt;3 meetings including draft review) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Term (1-3 meetings including draft review)</masterLabel>
+            <translation><!-- Short Term (1-3 meetings including draft review) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Date contract review was completed --></help>
+        <label><!-- Contract Review Completion Date --></label>
+        <name>Contract_Review_Completion_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer&apos;s Leading Candidate(s) --></label>
+        <name>Customer_s_Leading_Candidate_s__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Assets --></label>
+        <name>Data_Assets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Submitted --></label>
+        <name>Date_Submitted__c</name>
+    </fields>
+    <fields>
+        <help><!-- Request description and relevant information --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- EXPERT Recommendation --></label>
+        <name>EXPERT_Recommendation__c</name>
+        <picklistValues>
+            <masterLabel>Complete - Minor or No Comments</masterLabel>
+            <translation><!-- Complete - Minor or No Comments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete - Moderate Comments</masterLabel>
+            <translation><!-- Complete - Moderate Comments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending - Major Comments</masterLabel>
+            <translation><!-- Pending - Major Comments --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- EXPERT Review Type --></label>
+        <name>EXPERT_Review_Type__c</name>
+        <picklistValues>
+            <masterLabel>Executive Review</masterLabel>
+            <translation><!-- Executive Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formal Review</masterLabel>
+            <translation><!-- Formal Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formal Review - Resubmit Review</masterLabel>
+            <translation><!-- Formal Review - Resubmit Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Only required if this is a FDAMA Review --></help>
+        <label><!-- FDAMA Review Cycle --></label>
+        <name>FDAMA_Review_Cycle__c</name>
+        <picklistValues>
+            <masterLabel>Competent &amp; Reliable</masterLabel>
+            <translation><!-- Competent &amp; Reliable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Key Content</masterLabel>
+            <translation><!-- Key Content --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCA</masterLabel>
+            <translation><!-- PCA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Protocol Review</masterLabel>
+            <translation><!-- Protocol Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Summary of request output --></help>
+        <label><!-- Final Outcome --></label>
+        <name>Final_Outcome__c</name>
+    </fields>
+    <fields>
+        <label><!-- Molecule(s) --></label>
+        <name>Molecule_s__c</name>
+        <picklistValues>
+            <masterLabel>Abemaciclib</masterLabel>
+            <translation><!-- Abemaciclib --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Atomoxetine</masterLabel>
+            <translation><!-- Atomoxetine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BACE</masterLabel>
+            <translation><!-- BACE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BAFF-17</masterLabel>
+            <translation><!-- BAFF-17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Baricitinib</masterLabel>
+            <translation><!-- Baricitinib --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Basal insulin peglispro</masterLabel>
+            <translation><!-- Basal insulin peglispro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blosozumab</masterLabel>
+            <translation><!-- Blosozumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CGRP MAb</masterLabel>
+            <translation><!-- CGRP MAb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CXCR4</masterLabel>
+            <translation><!-- CXCR4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cetuximab</masterLabel>
+            <translation><!-- Cetuximab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chk1 inh</masterLabel>
+            <translation><!-- Chk1 inh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>D1PAM</masterLabel>
+            <translation><!-- D1PAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dulaglutide</masterLabel>
+            <translation><!-- Dulaglutide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Duloxetine</masterLabel>
+            <translation><!-- Duloxetine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edivoxetine</masterLabel>
+            <translation><!-- Edivoxetine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Empagliflozin</masterLabel>
+            <translation><!-- Empagliflozin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evacetripib</masterLabel>
+            <translation><!-- Evacetripib --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Exenatide</masterLabel>
+            <translation><!-- Exenatide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FGF receptor inh</masterLabel>
+            <translation><!-- FGF receptor inh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ferroportin</masterLabel>
+            <translation><!-- Ferroportin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Florbetapir</masterLabel>
+            <translation><!-- Florbetapir --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GSK3-beta</masterLabel>
+            <translation><!-- GSK3-beta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Galunisertib</masterLabel>
+            <translation><!-- Galunisertib --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gemcitabine</masterLabel>
+            <translation><!-- Gemcitabine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Glucagon-R antagonist</masterLabel>
+            <translation><!-- Glucagon-R antagonist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hedgehog</masterLabel>
+            <translation><!-- Hedgehog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hepcidin</masterLabel>
+            <translation><!-- Hepcidin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humulin U-100</masterLabel>
+            <translation><!-- Humulin U-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Humulin U-500</masterLabel>
+            <translation><!-- Humulin U-500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IL-23</masterLabel>
+            <translation><!-- IL-23 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Icrucumab</masterLabel>
+            <translation><!-- Icrucumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insulin</masterLabel>
+            <translation><!-- Insulin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insulin Basal Analog V - CPS</masterLabel>
+            <translation><!-- Insulin Basal Analog V - CPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insulin Isophane</masterLabel>
+            <translation><!-- Insulin Isophane --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insulin Lispro</masterLabel>
+            <translation><!-- Insulin Lispro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ixekizumab</masterLabel>
+            <translation><!-- Ixekizumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>JAK2 Inhibitor</masterLabel>
+            <translation><!-- JAK2 Inhibitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linagliptin &amp; Metformin HCl</masterLabel>
+            <translation><!-- Linagliptin &amp; Metformin HCl --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Myostatin</masterLabel>
+            <translation><!-- Myostatin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Myostatin antibody</masterLabel>
+            <translation><!-- Myostatin antibody --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N3pG-Abeta Antibody - CPS</masterLabel>
+            <translation><!-- N3pG-Abeta Antibody - CPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NOC-1 antagonist</masterLabel>
+            <translation><!-- NOC-1 antagonist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Necitumumab</masterLabel>
+            <translation><!-- Necitumumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Ins Glar</masterLabel>
+            <translation><!-- New Ins Glar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Business Unit Specific</masterLabel>
+            <translation><!-- Not Business Unit Specific --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Olanzapine</masterLabel>
+            <translation><!-- Olanzapine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Olanzapine Fluoxetine Combination (OFC)</masterLabel>
+            <translation><!-- Olanzapine Fluoxetine Combination (OFC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Olaratumab</masterLabel>
+            <translation><!-- Olaratumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oxyntomodulin peptide</masterLabel>
+            <translation><!-- Oxyntomodulin peptide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCSK9</masterLabel>
+            <translation><!-- PCSK9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pan-raf inhibitor</masterLabel>
+            <translation><!-- Pan-raf inhibitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pemetrexed</masterLabel>
+            <translation><!-- Pemetrexed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pi3 kinase MTOR inhibitor</masterLabel>
+            <translation><!-- Pi3 kinase MTOR inhibitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pitavastatin</masterLabel>
+            <translation><!-- Pitavastatin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pomaglumetad</masterLabel>
+            <translation><!-- Pomaglumetad --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prasugrel</masterLabel>
+            <translation><!-- Prasugrel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Raloxifene</masterLabel>
+            <translation><!-- Raloxifene --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ramucirumab</masterLabel>
+            <translation><!-- Ramucirumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solanezumab</masterLabel>
+            <translation><!-- Solanezumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somatropin</masterLabel>
+            <translation><!-- Somatropin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TGF-Beta</masterLabel>
+            <translation><!-- TGF-Beta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TGF-beta MAb</masterLabel>
+            <translation><!-- TGF-beta MAb --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TNFaIL-17 Bispecific Antibody - CPS</masterLabel>
+            <translation><!-- TNFaIL-17 Bispecific Antibody - CPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TNf-17</masterLabel>
+            <translation><!-- TNf-17 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tabalumab</masterLabel>
+            <translation><!-- Tabalumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tadalafil</masterLabel>
+            <translation><!-- Tadalafil --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tanezumab</masterLabel>
+            <translation><!-- Tanezumab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teriparatide</masterLabel>
+            <translation><!-- Teriparatide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testosterone</masterLabel>
+            <translation><!-- Testosterone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>c-Met inh</masterLabel>
+            <translation><!-- c-Met inh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>cMet-Mab</masterLabel>
+            <translation><!-- cMet-Mab --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>m-GLU</masterLabel>
+            <translation><!-- m-GLU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>p38 MAP kinase inh</masterLabel>
+            <translation><!-- p38 MAP kinase inh --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partnership Exploration Initiator --></label>
+        <name>Partnership_Exploration_Initiator__c</name>
+        <picklistValues>
+            <masterLabel>Lilly</masterLabel>
+            <translation><!-- Lilly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Potential Partner</masterLabel>
+            <translation><!-- Potential Partner --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Partnership Lead --></label>
+        <name>Partnership_Lead__c</name>
+    </fields>
+    <fields>
+        <label><!-- RWE Partnership Sponsor --></label>
+        <name>Partnership_Sponsor__c</name>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RWE</masterLabel>
+            <translation><!-- RWE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RWE Global</masterLabel>
+            <translation><!-- RWE Global --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA Owned</masterLabel>
+            <translation><!-- TA Owned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RWE Partnership Status --></label>
+        <name>Partnership_Status__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation><!-- Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Evaluated and Not Pursued</masterLabel>
+            <translation><!-- Evaluated and Not Pursued --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Suggested completion date of request or response --></help>
+        <label><!-- Proposed Due Date --></label>
+        <name>Proposed_Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rationale for Process Exception --></label>
+        <name>Rationale_for_Process_Exception__c</name>
+    </fields>
+    <fields>
+        <help><!-- Geographic region that the research study or data source represents. --></help>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>Canada/Europe</masterLabel>
+            <translation><!-- Canada/Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emerging Markets</masterLabel>
+            <translation><!-- Emerging Markets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global (Multiple Regions)</masterLabel>
+            <translation><!-- Global (Multiple Regions) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japan</masterLabel>
+            <translation><!-- Japan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation><!-- US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The status of the request --></help>
+        <label><!-- Request Status --></label>
+        <name>Request_Status__c</name>
+        <picklistValues>
+            <masterLabel>Accepted</masterLabel>
+            <translation><!-- Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Archived</masterLabel>
+            <translation><!-- Archived --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation><!-- Deleted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Functional area of the requestor --></help>
+        <label><!-- Requestor Functional Area --></label>
+        <name>Requestor_Functional_Area__c</name>
+        <picklistValues>
+            <masterLabel>CDIO</masterLabel>
+            <translation><!-- CDIO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DISCOVERY</masterLabel>
+            <translation><!-- DISCOVERY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GPORWE</masterLabel>
+            <translation><!-- GPORWE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GPS</masterLabel>
+            <translation><!-- GPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GSS</masterLabel>
+            <translation><!-- GSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MEDICAL</masterLabel>
+            <translation><!-- MEDICAL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OTHER</masterLabel>
+            <translation><!-- OTHER --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Research FDAMA114 Eligible --></label>
+        <name>Research_FDAMA114_Eligible__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Requestor email notification preference (on submit) --></help>
+        <label><!-- Send Notification --></label>
+        <name>Send_Notification__c</name>
+    </fields>
+    <fields>
+        <help><!-- Study Identifier i.e. Study Alias/BCM/BoB ID or IMPACT # --></help>
+        <label><!-- Study ID --></label>
+        <name>Study_Alias_Project_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Study Category --></label>
+        <name>Study_Category__c</name>
+        <picklistValues>
+            <masterLabel>Both Safety and Effectiveness</masterLabel>
+            <translation><!-- Both Safety and Effectiveness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comparative Effectiveness</masterLabel>
+            <translation><!-- Comparative Effectiveness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comparative Safety</masterLabel>
+            <translation><!-- Comparative Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Safety/Comparative Effectiveness</masterLabel>
+            <translation><!-- No Safety/Comparative Effectiveness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety Objective</masterLabel>
+            <translation><!-- Safety Objective --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Study Type --></label>
+        <name>Study_Design_Type__c</name>
+        <picklistValues>
+            <masterLabel>PMSS</masterLabel>
+            <translation><!-- PMSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pragmatic</masterLabel>
+            <translation><!-- Pragmatic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Primary Observational Studies</masterLabel>
+            <translation><!-- Primary Observational Studies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Secondary Observational Studies</masterLabel>
+            <translation><!-- Secondary Observational Studies --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submitted --></label>
+        <name>Submitted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Term Sheet Customized --></label>
+        <name>Term_Sheet_Customized__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Disease state that is involved in the research study or would be served by the data asset --></help>
+        <label><!-- Therapeutic Area (Primary) --></label>
+        <name>Therapeutic_Area_Primary__c</name>
+        <picklistValues>
+            <masterLabel>Cardio Metabolic</masterLabel>
+            <translation><!-- Cardio Metabolic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cell and Gene Therapy</masterLabel>
+            <translation><!-- Cell and Gene Therapy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Immunology and Dermatology</masterLabel>
+            <translation><!-- Immunology and Dermatology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Neuroscience</masterLabel>
+            <translation><!-- Neuroscience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oncology</masterLabel>
+            <translation><!-- Oncology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Respiratory</masterLabel>
+            <translation><!-- Respiratory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retina</masterLabel>
+            <translation><!-- Retina --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type of Partner --></label>
+        <name>Type_of_Partner__c</name>
+        <picklistValues>
+            <masterLabel>Academic medical center</masterLabel>
+            <translation><!-- Academic medical center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultancy firm</masterLabel>
+            <translation><!-- Consultancy firm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government entity</masterLabel>
+            <translation><!-- Government entity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare IT/Informatics</masterLabel>
+            <translation><!-- Healthcare IT/Informatics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrated health system</masterLabel>
+            <translation><!-- Integrated health system --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-profit</masterLabel>
+            <translation><!-- Non-profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Patient advocacy group</masterLabel>
+            <translation><!-- Patient advocacy group --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payer</masterLabel>
+            <translation><!-- Payer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharma company</masterLabel>
+            <translation><!-- Pharma company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pharmacy benefit manager</masterLabel>
+            <translation><!-- Pharmacy benefit manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Professional society</masterLabel>
+            <translation><!-- Professional society --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Research network</masterLabel>
+            <translation><!-- Research network --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- What Makes It Unique --></label>
+        <name>What_Makes_It_Unique__c</name>
+    </fields>
+    <layouts>
+        <layout>RWE Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- RWE Data Sourcing --></label>
+        <name>Data_Sourcing</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Datamart Scientific Consultation --></label>
+        <name>Datamart_Scientific_Consultation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EXPERT Exception --></label>
+        <name>EXPERT_Exception</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EXPERT Review --></label>
+        <name>EXPERT_Review</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EXPERT Workstream --></label>
+        <name>EXPERT_Workstream</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- EXPERT or ACT Consultation --></label>
+        <name>EXPERT_or_ACT_Consultation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Data Mart Access --></label>
+        <name>Internal_Real_World_Data_Access</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Data Mart Project --></label>
+        <name>Internal_Real_World_Data_Analysis</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RWD Technical Assessment or Evaluation --></label>
+        <name>RWD_Technical_AssessmentorEvaluation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RWE Partnership Exploration --></label>
+        <name>RWE_Partnership_Exploration</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RWE Strategic Consultation --></label>
+        <name>RWE_Strategic_Consultation</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Real World Analytics Assessment --></label>
+        <name>Real_World_Analytics_Assessment</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- RWD Data Load and/or Technical Assessment --></label>
+        <name>Real_World_Data_Load</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Request Name, Requestor, Workstream Deliverables, Workstream Problem Statement, and Final Outcome  need to be filled in to archive a request. --></errorMessage>
+        <name>PANG_Valid_Req_EXPERT_Work</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Request Name, Requestor, Primary Therapeutic Area, Study Type, Requestor Functional area,  Study Alias / Study ID,  and EXPERT Recommendation are needed to b filled in to archive a request. --></errorMessage>
+        <name>PANG_Valid_Req_Expert_Review</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- (Request Name, Requestor, Access Type, Role, Completed Date, Completed Contract Reviews, Access Location, and Approval Status must be filled in to archive a request. --></errorMessage>
+        <name>PANG_Valid_Req_Int_Real_World_Data_Acc</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Request Name, Requestor, Application of Delivery, Final Outcome, Request Type must be filled in to archive a request. --></errorMessage>
+        <name>PANG_Valid_Req_Int_Real_World_Data_Ana</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Request Name, or Requestor, Validation Completion Date must be filled in to archive a request. --></errorMessage>
+        <name>PANG_Valid_Req_RWD_Tech_Ass_Eva</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Request Name, Requestor, Data Asset, Data Load Successful must be filled in to archive a request. --></errorMessage>
+        <name>PANG_Valid_Req_Real_World_Data_Load</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must have the Request Name and rRequestor filled in to Submit a request. --></errorMessage>
+        <name>PANG_Valid_Req_Sub_Name_Req</name>
+    </validationRules>
+</CustomObjectTranslation>

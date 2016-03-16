@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <attributes>
+        <formula>$User.Username</formula>
+        <key>uid</key>
+    </attributes>
+    <contactEmail>sandhnayak@deloitte.com</contactEmail>
+    <label>DAE_QA</label>
+    <samlConfig>
+        <acsUrl>https://10.118.254.7/Shibboleth.sso/SAML2/POST</acsUrl>
+        <encryptionType>AES_128</encryptionType>
+        <entityUrl>https://10.118.254.7/shibboleth</entityUrl>
+        <issuer>https://dae--myrwe.cs20.my.salesforce.com</issuer>
+        <samlNameIdFormat>Transient</samlNameIdFormat>
+        <samlSubjectType>Username</samlSubjectType>
+    </samlConfig>
+    <startUrl>https://10.118.254.7/DAEServices/checkUserInfo/getUserInfo</startUrl>
+</ConnectedApp>

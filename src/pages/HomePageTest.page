@@ -1,0 +1,104 @@
+<apex:page sidebar="false" showHeader="false" standardStylesheets="false" controller="HomePage">
+<c:NavigationBar />
+<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+<meta content="utf-8" http-equiv="encoding" />
+ 
+        <div class="row topdiv">
+            <div class="md-col-12">
+            <h3 class="home_center_title">Explore Real World Evidence</h3>
+            <h5 class="home_center_title">Drive insights from real world data</h5>
+            <div class="input-group">
+                    <div class="icon-addon addon-lg">
+                        <input type="text" placeholder="Explore" class="form-control" id="sText" onKeyPress="runScript(event)"/>
+                        <label for="email" class="glyphicon glyphicon-search" rel="tooltip" title="email"></label>
+                    </div>
+                    <div class="input-group-btn">
+                     <button class="btn btn-primary search_margin" type="submit" onclick="redirectLink()" title="Explore">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row middiv">
+            <div class="container container-add">
+                <div class="row vertical-center-row">
+                    <div class="col-md-12 buttons-container">
+                        <div class="app-button">
+                            <span class="home-mid-span-font">
+                                <b>{!mCategoyCount['DataAssets']}</b> Data Assets
+                            </span>
+                            <a href="/apex/dataassetlistPageNew">
+                            <div class="app-button-inner studies-bg"></div></a>
+                        </div>
+                        <div class="app-button">
+                            <span class="home-mid-span-font">
+                                <b>{!mCategoyCount['Study']}</b> Studies
+                            </span>
+                            <a href="/apex/StudiesList">
+                            <div class="app-button-inner dassets-bg"></div></a>
+                        </div>
+                        <div class="app-button">
+                            <span class="home-mid-span-font">
+                                <b>{!mCategoyCount['Partnerships']}</b> Partnerships
+                            </span>
+                            <a href="/apex/partnershipList">
+                            <div class="app-button-inner partner-bg"></div></a>
+                        </div>
+                        <div class="app-button">
+                            <span class="home-mid-span-font">
+                                <b>{!mCategoyCount['Request']}</b> Requests
+                            </span>
+                            <a href="/apex/RequestListPage">
+                           <div class="app-button-inner request-bg" ></div></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row bottomdiv ">
+            <div class="container container-add">
+                <div class="row vertical-center-row">
+                    <div class="col-md-12 buttons-container vdivide">
+                        <div class="app-button bottomdiv-tweaks">
+                            <h4><span class="home-mid-span-font">Contribute </span></h4>
+                            <p class="home-bot-span-font">Place holder for description.Place holder for description.Place holder for description.Place holder for description.</p>
+                            <br />
+                            <p><a class="btn btn-primary btn-width" type="submit" href="/apex/submitDataAsset" >Submit a new Data Asset</a></p>
+                            <p><button class="btn btn-primary btn-width" type="submit">New RWE Partnership Exploration</button></p>
+                        </div>
+                        <div class="app-button bottomdiv-tweaks">
+                            <h4><span class="home-mid-span-font">Request </span></h4>
+                            <p class="home-bot-span-font">Place holder for description.Place holder for description.Place holder for description.Place holder for description.</p>
+                            <br />
+                            <p><button class="btn btn-primary btn-width" type="submit">Data Mart Project</button></p>
+                            <p><button class="btn btn-primary btn-width" type="submit">RWE Data Sourcing</button></p>
+                        </div>
+                        <div class="app-button bottomdiv-tweaks">
+                            <h4><span class="home-mid-span-font">Connect </span></h4>
+                            <p class="home-bot-span-font">Place holder for description.Place holder for description.Place holder for description.Place holder for description.</p>
+                            <br />
+                            <p><button class="btn btn-primary btn-width" type="submit">RWE Community</button></p>
+                            <p><button class="btn btn-primary btn-width" type="submit">Access Control Libraries</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    <script>
+        function runScript(e) {
+            if (e.keyCode == 13) {
+                redirectLink();
+            }
+        }
+        function redirectLink(){
+            var tb = document.getElementById("sText").value;
+            window.location.href = "https://rwepoc--myrwe--c.cs20.visual.force.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=003&sen=005&sen=a06&sen=a07&str=" +tb ;  
+
+        }
+
+    </script>
+    
+<c:Footer />
+</apex:page>

@@ -1,0 +1,12 @@
+<apex:component >
+    <footer>
+        <div class="container-fluid footer-container footer-toptweak">
+            <div class="row">
+                <div class="container">
+                    <!--<div class="col-md-6 "><img alt="Deloitte" height="59" src="images/converge-health-logo-wh.png" width="189"/></div>-->
+                    <div class="col-md-6 "><img alt="Deloitte" height="59" src="{!URLFOR($Resource.Workspace, 'images/converge-health-logo-wh.png')}" width="189"/></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</apex:component>

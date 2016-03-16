@@ -1,0 +1,12 @@
+<apex:page standardController="RWE_Data_Asset__c" >
+   <!-- <apex:detail relatedList="true">
+       
+    </apex:detail> -->
+     <apex:relatedList list="ProcessSteps" title="Approval History" />
+             <style type="text/css">
+                .actionColumn {display:none; visibility:hidden}
+                .btnn {display:none; visibility:hidden}
+                .pShowMore {display:none; visibility:hidden}
+                .pbButton {display:none; visibility:hidden}
+         </style>
+</apex:page>

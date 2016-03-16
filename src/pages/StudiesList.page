@@ -1,0 +1,155 @@
+<apex:page StandardController="RWE_Study__c" extensions="StudyListController" sidebar="false" showHeader="false" standardStylesheets="false">
+<c:NavigationBar />
+<apex:form >
+    <div class="container">
+        <div id="collapsible-panels">
+            <div class="row">
+                <div class="col-md-12">
+                    <!--Change class to 12 columns-->
+                    <h3 class="pull-left">
+                        <i class="fa fa-codepen" style="color:#e5e5e5;"></i>
+                        <span style="font-size:22px; font-family:Arial, Helvetica, sans-serif; margin-left:5px;">Studies: {!cStudyListCntlr.ResultSize}</span>
+                    </h3>
+                </div>
+                <!--removed search box-->
+            </div>
+            <div>
+                <table id="tblHeader" style="width:100%; margin-top:20px;">
+                    <tr>
+                        <td align="left" style="margin-left:25px;">
+                            <span id="controlSpan" class="glyphicon glyphicon-chevron-up" style="cursor:pointer;padding:10px;margin-left:10px;">
+                                <span style="font-size:22px; font-family:Arial, Helvetica, sans-serif;"> Filters</span>
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="contentdiv" class="row vdivide">
+                <div id="contentTable" class="col-md-12" style="min-height:240px; background-color:#A8D5EE; border:1px solid #e5e5e5; ">
+                    <div valign="top" class="col-md-3">
+                        <!--Change class-->
+                        <h4>Therapeutic Area</h4>
+                        <ul class="checkbox">
+                           <apex:repeat value="{!mStudyObjectStructure['Therapeutic_Area__c']}" var="Tarea">
+                                    <li>
+                                        <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                            <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                        </apex:inputCheckbox>
+                                        <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                    </li>
+                            </apex:repeat>
+                        </ul>
+                    </div>
+                    <div valign="top" class="col-md-3">
+                        <!--Change class-->
+                        <h4>Study Type</h4>
+                        <ul class="checkbox">
+                            <apex:repeat value="{!mStudyObjectStructure['Study_Type__c']}" var="Tarea">
+                                <li >
+                                    <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                        <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                    </apex:inputCheckbox>
+                                    <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                </li>
+                            </apex:repeat>
+                        </ul>
+                    </div>
+                    <div valign="top" class="col-md-3">
+                        <h4>Status</h4>
+                        <ul class="checkbox">
+                            <apex:repeat value="{!mStudyObjectStructure['Study_Status__c']}" var="Tarea">
+                                <li >
+                                    <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                        <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                    </apex:inputCheckbox>
+                                    <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                </li>
+                            </apex:repeat>
+                        </ul>
+                    </div>
+                    <div valign="top" class="col-md-3">   <!-- This is Hard Coded for Demo -->
+                        <h4>Region</h4>
+                        
+                        <ul class="checkbox">
+                            <apex:repeat value="{!mStudyObjectStructure['Region__c']}" var="Tarea">
+                                <li >
+                                    <apex:inputCheckbox value="{!Tarea.isSelected}" style="outline: 2px solid green background-color: #d0e4fe;" >
+                                        <apex:actionSupport event="onchange" action="{!FetchDataForCriteria}" rerender="iTable" />
+                                    </apex:inputCheckbox>
+                                    <label for='{!Tarea.Label}'>{!Tarea.Label} ({!mCategoyCount[Tarea.Label]})</label>
+                                </li>
+                            </apex:repeat>
+                        </ul>
+                                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="col-xs-12">
+           <apex:outputPanel id="iTable">
+                <div class="tab-content">
+                        <table id="testTable"  data-toggle="table" class="table table-bordered" data-search="true" data-pagination="true" data-page-size="10">
+                        <thead>
+                            <tr>
+                            <th data-field="id" data-visible="false"></th>
+                            <th data-field="name" data-sortable="true" data-sorter="SorterCol">Studies</th>
+                            <th data-field="owner" data-sortable="true">Study Lead</th>
+                            <th data-field="dprofiler" data-sortable="true">Data Assets Utilized</th>
+                            <th data-field="sutil" data-sortable="true">Studies Utilized</th>
+                            <th data-field="dtcreate" data-sortable="true">Start Date</th>
+                            <th data-field="apprstat" data-sortable="true">Status</th>
+                        </tr>
+                    </thead>
+                    
+                    <apex:repeat value="{!Studies}" var="eStudies">
+                                <tr>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <a href="/{!eStudies.Id}"> <apex:outputLabel value="{!eStudies.Name}" title="{!eStudies.Study_Description__c}" /> </a>
+                                    </td>
+                                    <td>
+                                        <a href="/{!eStudies.Study_Lead__c}"> <apex:outputLabel value="{!eStudies.Study_Lead__r.Name}" /> </a>
+                                    </td>
+                                    <td>
+                                        <apex:repeat value="{!eStudies.RWE_Data_Asset_Study_Link__r}" var="eachStudy">
+                                            <b>     <apex:outputField value="{!eachStudy.RWE_Data_Asset__c}" /><br/> </b>
+                                        </apex:repeat>
+                                           <!-- <apex:outputLabel value="{!eStudies.Count_Study_Link__c}" />   <!-- &nbsp;&nbsp; &nbsp;&nbsp; --> 
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eStudies.Study_Pick__c}" />
+                                    </td>
+                                    <td>
+                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                            <apex:param value="{!eStudies.Start_Date__c}" />
+                                        </apex:outputText>
+                                    </td>
+                                    <td>
+                                        <apex:outputLabel value="{!eStudies.Study_Status__c}" />
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                </table>
+                <script type="text/javascript">
+                       $("#testTable").bootstrapTable({
+                            pagination: true
+                       });
+                       
+                        $("body").on('click','.outputLabel',function() {
+                         var myUrl = $(this).parent().attr('href');
+                         window.open(myUrl,'_top');
+                         //alert(myUrl);
+                         return false;
+                        });
+                        
+                        
+                    </script>
+            </div>
+            </apex:outputPanel>
+        </div>
+    </div>
+<c:Footer />
+</apex:form>
+</apex:page>

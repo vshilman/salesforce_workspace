@@ -1,0 +1,32 @@
+<apex:page standardcontroller="RWE_Data_Asset__c" extensions="Poc_DataAcknowledge" action="{!onPageLoad}" docType="html-5.0" sidebar="false" showHeader="false" standardStylesheets="false">
+ 
+  <html lang="en">
+  <head>
+    <title>Asset Acknowledgement</title>
+
+    <!-- compiled CSS -->
+            <apex:stylesheet value="{!URLFOR($Resource.Clone_QFOR_R1Style,'vendor/bootstrap/bootstrap.css')}" />
+            <apex:stylesheet value="{!URLFOR($Resource.Clone_QFOR_R1Style,'assets/QFOR-1.0.0.css')}" />
+    
+
+  </head>
+    <main class="container">
+        <apex:form styleclass="qfor-firewall">
+            <section class="row firewall-warning">
+                <div class="col-xs-12 firewall-content-wrapper">
+                    <h1 class="warning-header">
+                        <span class="ico-full-warning"></span>WARNING</h1>
+                    <p align="center" class="warning-content"><apex:outputText >{!sFireWallMessage}</apex:outputText>                     
+                    </p>
+                </div>
+            </section>           
+            <section class="row submit">
+                <div class="col-xs-12">
+                    <apex:commandbutton value="I Acknowledge" styleclass="acknowledge-warning button" action="{!onAcknowledge}"/>
+                    <apex:commandbutton value="Cancel" styleclass="cancel-warning button" action="{!onCancel}"/>
+                </div>
+            </section>
+        </apex:form>
+    </main>
+</html>
+</apex:page>

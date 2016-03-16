@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>New Data Asset Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>New Data Asset Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Data Asset Owner --></label>
+        <name>Data_Asset_Owner__c</name>
+        <relationshipLabel><!-- New Data Asset Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Data Type --></label>
+        <name>Data_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Database Type --></label>
+        <name>Database_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Status --></label>
+        <name>Request_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Legal Review</masterLabel>
+            <translation><!-- Under Legal Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under License Review</masterLabel>
+            <translation><!-- Under License Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Therapeutic Area --></label>
+        <name>Therapeutic_Area__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

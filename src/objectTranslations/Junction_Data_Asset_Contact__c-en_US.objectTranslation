@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RWE Data Asset - Contact Link</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RWE Data Asset - Contact Link</value>
+    </caseValues>
+    <fields>
+        <label><!-- RWE Data Asset --></label>
+        <name>RWE_Data_Asset__c</name>
+        <relationshipLabel><!-- RWE Data Asset - Contact Link --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

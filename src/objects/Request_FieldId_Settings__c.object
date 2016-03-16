@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>Hierarchy</customSettingsType>
+    <description>Store some field ids which are used in javascript codes in a custom button &apos;create secondary request&apos;.</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>Business_Unit_Primary__c</fullName>
+        <externalId>false</externalId>
+        <label>Business Unit Primary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Molecule_multi__c</fullName>
+        <externalId>false</externalId>
+        <label>Molecule multi</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Request__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Request</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Primary_Therapeutic_Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Therapeutic Area</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RWD_Inventory__c</fullName>
+        <externalId>false</externalId>
+        <label>Data Asset</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RWE_AppId__c</fullName>
+        <externalId>false</externalId>
+        <label>RWE_AppId</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RWE_Request_Keyfix__c</fullName>
+        <externalId>false</externalId>
+        <label>RWE_Request_Keyfix</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RWE_Request_Request_Molecule__c</fullName>
+        <externalId>false</externalId>
+        <label>RWE Request (Request Molecule)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>RWE_Study_Study_Molecule__c</fullName>
+        <externalId>false</externalId>
+        <label>RWE Study (Study Molecule)</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Record_Type_1__c</fullName>
+        <description>RWE Data Load and/or Technical Assessment Record Type Id</description>
+        <externalId>false</externalId>
+        <label>Record Type 1</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Related_Project__c</fullName>
+        <externalId>false</externalId>
+        <label>Related Project</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requestor_Functional_Area__c</fullName>
+        <externalId>false</externalId>
+        <label>Requestor Functional Area</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Requestor__c</fullName>
+        <externalId>false</externalId>
+        <label>Requestor</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Study_Alias_Project_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Study Alias Project ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Therapeutic_Area_Primary_Req_Molecule__c</fullName>
+        <externalId>false</externalId>
+        <label>Therapeutic Area (Primary) Req Molecule</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Therapeutic_Area_Primary_Stu_Molecule__c</fullName>
+        <externalId>false</externalId>
+        <label>Therapeutic Area (Primary) Stu Molecule</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>RWE Request FieldId Settings</label>
+    <visibility>Protected</visibility>
+</CustomObject>
